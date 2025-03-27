@@ -1,9 +1,12 @@
 import Image from "next/image";
+import About from "../components/About";
+import Hero from "../components/Hero";
 
 export default function Home() {
   return (
     <div >
-      <p className="text-3xl text-dark">Whereas disregard and contempt for human rights have resulted</p>
+       <Hero />
+      <About />
     </div>
   );
 }
