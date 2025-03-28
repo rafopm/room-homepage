@@ -38,15 +38,30 @@ const Hero = () => {
             <div className='h-[360px] relative'>
 
                 <picture>
-                    <source srcSet={slides[activeSlide].imageMobile} media="(max-width: 768px)" />
-                    <source srcSet={slides[activeSlide].image} media="(min-width: 769px)" />
-                    <img className="w-full" src={slides[activeSlide].image} alt={slides[activeSlide].title} />
+                    <source
+                        srcSet={`${process.env.PAGES_BASE_PATH || ''}${slides[activeSlide].imageMobile}`}
+                        media="(max-width: 768px)"
+                    />
+                    <source
+                        srcSet={`${process.env.PAGES_BASE_PATH || ''}${slides[activeSlide].image}`}
+                        media="(min-width: 769px)"
+                    />
+                    <img
+                        className="w-full"
+                        src={`${process.env.PAGES_BASE_PATH || ''}${slides[activeSlide].image}`}
+                        alt={slides[activeSlide].title}
+                    />
                 </picture>
 
-
                 <div className='absolute bottom-0 right-0 w-[112px] h-[56px] bg-black flex justify-center items-center gap-6'>
-                    <button onClick={prevSlide} ><img className='filter-white h-6' src="/images/icon-arrow-left.svg" alt="" /></button>
-                    <button onClick={nextSlide}><img className='filter-white  h-6' src="/images/icon-arrow-right.svg" alt="" /></button>
+                    <button onClick={prevSlide}>
+                        <img className='filter-white h-6'
+                            src={`${process.env.PAGES_BASE_PATH || ''}/images/icon-arrow-left.svg`} alt="" />
+                    </button>
+                    <button onClick={nextSlide}>
+                        <img className='filter-white h-6'
+                            src={`${process.env.PAGES_BASE_PATH || ''}/images/icon-arrow-right.svg`} alt="" />
+                    </button>
                 </div>
 
             </div>
@@ -55,6 +70,7 @@ const Hero = () => {
                 <p>{slides[activeSlide].description}</p>
             </div>
         </div>
+
 
     )
 }
