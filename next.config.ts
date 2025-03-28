@@ -7,6 +7,7 @@ const nextConfig: NextConfig = {
   },
   basePath: "/room-homepage",
   assetPrefix: "/room-homepage/",
+  reactStrictMode: true,
 };
 
 module.exports = nextConfig;
