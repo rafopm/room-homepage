@@ -9,4 +9,4 @@ const nextConfig: NextConfig = {
   assetPrefix: "/room-homepage/",
 };
 
-export default nextConfig;
+module.exports = nextConfig;
