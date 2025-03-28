@@ -5,7 +5,7 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true, 
   },
-  basePath: "/room-homepage",
+  basePath: process.env.PAGES_BASE_PATH || '',
   assetPrefix: "/room-homepage/",
   reactStrictMode: true,
 };
