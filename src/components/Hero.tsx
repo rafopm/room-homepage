@@ -1,22 +1,12 @@
 'use client'
-import { useState, useEffect } from 'react'
-import { usePathname } from 'next/navigation'
-
+import { useState } from 'react'
+import useBaseUrl from '@/Hooks/useBaseUrl'
 
 const Hero = () => {
-    const [baseUrl, setBaseUrl] = useState('')
-    const pathname = usePathname()
+    const baseUrl = useBaseUrl()
 
-    console.log("path",pathname,"-","baseUrl",baseUrl)
-    useEffect(() => {
-        // Esto se ejecuta solo en el cliente, donde window está disponible
-        setBaseUrl(window.location.origin)
-
-        if (window.location.origin === 'https://rafopm.github.io') {
-            setBaseUrl('https://rafopm.github.io/room-homepage')
-        }
-    }, [])
-
+    console.log("baseUrl", baseUrl)
+    console.log(process.env.NODE_ENV)
     const slides = [
         {
             image: `${baseUrl}/images/desktop-image-hero-1.jpg`,
