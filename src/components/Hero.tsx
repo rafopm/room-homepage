@@ -33,6 +33,8 @@ const Hero = () => {
     const prevSlide = () => {
         setActiveSlide((prev) => (prev === 0 ? slides.length - 1 : prev - 1));
     }
+
+    console.log("path",process.env.PAGES_BASE_PATH)
     return (
         <div>
             <div className='h-[360px] relative'>
