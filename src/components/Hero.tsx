@@ -11,6 +11,10 @@ const Hero = () => {
     useEffect(() => {
         // Esto se ejecuta solo en el cliente, donde window está disponible
         setBaseUrl(window.location.origin)
+
+        if (window.location.origin === 'https://rafopm.github.io') {
+            setBaseUrl('https://rafopm.github.io/room-homepage')
+        }
     }, [])
 
     const slides = [
