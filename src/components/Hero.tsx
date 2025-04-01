@@ -1,7 +1,6 @@
 'use client'
 import { useState } from 'react'
 
-
 const Hero = () => {
     const slides = [
         {
@@ -34,23 +33,23 @@ const Hero = () => {
         setActiveSlide((prev) => (prev === 0 ? slides.length - 1 : prev - 1));
     }
 
-    console.log("path",process.env.PAGES_BASE_PATH)
+
     return (
         <div>
             <div className='h-[360px] relative'>
 
                 <picture>
                     <source
-                        srcSet={`${process.env.PAGES_BASE_PATH || ''}${slides[activeSlide].imageMobile}`}
+                        srcSet={slides[activeSlide].imageMobile}
                         media="(max-width: 768px)"
                     />
                     <source
-                        srcSet={`${process.env.PAGES_BASE_PATH || ''}${slides[activeSlide].image}`}
+                        srcSet={slides[activeSlide].image}
                         media="(min-width: 769px)"
                     />
                     <img
                         className="w-full"
-                        src={`${process.env.PAGES_BASE_PATH || ''}${slides[activeSlide].image}`}
+                        src={slides[activeSlide].image}
                         alt={slides[activeSlide].title}
                     />
                 </picture>
@@ -58,11 +57,11 @@ const Hero = () => {
                 <div className='absolute bottom-0 right-0 w-[112px] h-[56px] bg-black flex justify-center items-center gap-6'>
                     <button onClick={prevSlide}>
                         <img className='filter-white h-6'
-                            src={`${process.env.PAGES_BASE_PATH || ''}/images/icon-arrow-left.svg`} alt="" />
+                            src="/images/icon-arrow-left.svg" alt="" />
                     </button>
                     <button onClick={nextSlide}>
                         <img className='filter-white h-6'
-                            src={`${process.env.PAGES_BASE_PATH || ''}/images/icon-arrow-right.svg`} alt="" />
+                            src="/images/icon-arrow-right.svg" alt="" />
                     </button>
                 </div>
 
