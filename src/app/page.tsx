@@ -4,7 +4,7 @@ import Hero from "../components/Hero";
 
 export default function Home() {
   return (
-    <div >
+    <div className="lg:h-screen">
       <Hero />
       <About />
     </div>

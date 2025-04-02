@@ -9,10 +9,10 @@ export default {
   theme: {
     extend: {
       colors: {
-        "dark-gray": "var(--color-dark-gray)",
+        darkGray: "var(--color-dark-gray)",
         black: "var(--color-black)",
         white: "var(--color-white)",
-        "very-dark-gray": "var(--color-very-dark-gray)",
+        veryDarkGray: "var(--color-very-dark-gray)",
         
       },
       fontFamily: {
@@ -28,7 +28,7 @@ export default {
 
       },
       letterSpacing: {
-        'n5': '-0.08em',
+        'n5': '-0.072em',
         'n25': '-0.07em',
         'l5': '0.7em',
       }

@@ -39,7 +39,7 @@ const Hero = () => {
     if (baseUrl === '') return <div className='h-screen flex justify-center items-center'>Loading...</div>;
 
     return (
-        <div className='flex flex-col lg:flex-row h-screen'>
+        <div className='flex flex-col lg:flex-row h-screen lg:h-auto'>
 
             <div className='lg:h-full lg:w-[58%] h-[360px] relative'>
                 <picture className='w-full h-full block'>
@@ -75,7 +75,7 @@ const Hero = () => {
                     <h2 className='font-bold text-[39.5px] lg:text-4xl mb-4 tracking-n5 leading-none'>
                         {slides[activeSlide].title}
                     </h2>
-                    <p className='text-gray-500 mb-6 tracking-n25 font-semibold text-dark-gray'>{slides[activeSlide].description}</p>
+                    <p className=' mb-6 tracking-n25 font-semibold text-darkGray'>{slides[activeSlide].description}</p>
                     <div className='flex flex-row gap-4 items-center hover:cursor-pointer'>
                         <span className='font-bold tracking-l5'>SHOP NOW</span>
                         <img className='h-[12px]' src={`${baseUrl}/images/icon-arrow.svg`} alt="" />
