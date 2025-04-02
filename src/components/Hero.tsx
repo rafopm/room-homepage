@@ -5,8 +5,6 @@ import useBaseUrl from '@/Hooks/useBaseUrl'
 const Hero = () => {
     const baseUrl = useBaseUrl()
 
-    console.log("baseUrl", baseUrl)
-    console.log(process.env.NODE_ENV)
     const slides = [
         {
             image: `${baseUrl}/images/desktop-image-hero-1.jpg`,
@@ -37,6 +35,8 @@ const Hero = () => {
     const prevSlide = () => {
         setActiveSlide((prev) => (prev === 0 ? slides.length - 1 : prev - 1));
     }
+
+    if (baseUrl === '') return <div>Loading...</div>;
 
     return (
         <div>
