@@ -27,6 +27,11 @@ export default {
         bold: "var(--font-weight-bold)",
 
       },
+      letterSpacing: {
+        'n5': '-0.08em',
+        'n25': '-0.07em',
+        'l5': '0.7em',
+      }
     },
   },
   plugins: [],

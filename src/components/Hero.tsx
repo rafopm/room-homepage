@@ -36,12 +36,13 @@ const Hero = () => {
         setActiveSlide((prev) => (prev === 0 ? slides.length - 1 : prev - 1));
     }
 
-    if (baseUrl === '') return <div>Loading...</div>;
+    if (baseUrl === '') return <div className='h-screen flex justify-center items-center'>Loading...</div>;
 
     return (
-        <div>
-            <div className='h-[360px] relative'>
-                <picture>
+        <div className='flex flex-col lg:flex-row h-screen'>
+
+            <div className='lg:h-full lg:w-[58%] h-[360px] relative'>
+                <picture className='w-full h-full block'>
                     <source
                         srcSet={slides[activeSlide].imageMobile}
                         media="(max-width: 768px)"
@@ -51,26 +52,35 @@ const Hero = () => {
                         media="(min-width: 769px)"
                     />
                     <img
-                        className="w-full"
+                        className="w-full h-full object-cover"
                         src={slides[activeSlide].image}
                         alt={slides[activeSlide].title}
                     />
                 </picture>
 
-                <div className='absolute bottom-0 right-0 w-[112px] h-[56px] bg-black flex justify-center items-center gap-6'>
-                    <button onClick={prevSlide}>
+                <div className='absolute bottom-0 right-0 w-[112px] h-[56px] bg-black flex justify-center items-center gap-6 lg:right-auto lg:left-[calc(100%-112px)]'>
+                    <button onClick={prevSlide} className='hover:opacity-70 transition-opacity'>
                         <img className='filter-white h-6'
-                            src={`${baseUrl}/images/icon-arrow-left.svg`} alt="" />
+                            src={`${baseUrl}/images/icon-arrow-left.svg`} alt="Previous" />
                     </button>
-                    <button onClick={nextSlide}>
+                    <button onClick={nextSlide} className='hover:opacity-70 transition-opacity'>
                         <img className='filter-white h-6'
-                            src={`${baseUrl}/images/icon-arrow-right.svg`} alt="" />
+                            src={`${baseUrl}/images/icon-arrow-right.svg`} alt="Next" />
                     </button>
                 </div>
             </div>
-            <div>
-                <h2>{slides[activeSlide].title}</h2>
-                <p>{slides[activeSlide].description}</p>
+
+            <div className='lg:h-full lg:w-[42%] px-[30px] relative lg:p-16 flex flex-col justify-center overflow-y-auto'>
+                <div className='pt-[50px] lg:py-0'>
+                    <h2 className='font-bold text-[39.5px] lg:text-4xl mb-4 tracking-n5 leading-none'>
+                        {slides[activeSlide].title}
+                    </h2>
+                    <p className='text-gray-500 mb-6 tracking-n25 font-semibold text-dark-gray'>{slides[activeSlide].description}</p>
+                    <div className='flex flex-row gap-4 items-center hover:cursor-pointer'>
+                        <span className='font-bold tracking-l5'>SHOP NOW</span>
+                        <img className='h-[12px]' src={`${baseUrl}/images/icon-arrow.svg`} alt="" />
+                    </div>
+                </div>
             </div>
         </div>
     )

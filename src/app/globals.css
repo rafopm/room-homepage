@@ -23,23 +23,17 @@
 body {
   font-family: var(--font-family-primary);
   font-size: var(--font-size-base);
-  color: var(--color-black);
   background-color: var(--color-white);
   margin: 0;
   padding: 0;
-  line-height: 1.6;
+
 }
 
-.container {
-  width: 100%;
-  max-width: var(--container-max-width);
-  margin: 0 auto;
-  padding: 0 16px;
-}
+ 
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: var(--font-weight-bold);
-  margin: 0 0 16px;
+ 
 }
 
 p {
@@ -51,14 +45,10 @@ p {
 }
 
 @media (min-width: 768px) {
-  .container {
-    padding: 0 32px;
-  }
+ 
 }
 
 @media (min-width: 1024px) {
-  .container {
-    padding: 0 48px;
-  }
+  
 }
 
