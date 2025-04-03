@@ -41,8 +41,8 @@ const Hero = () => {
     return (
         <div className='flex flex-col lg:flex-row h-screen lg:h-auto'>
 
-            <div className='lg:h-full lg:w-[58%] h-[360px] relative'>
-                <picture className='w-full h-full block'>
+            <div className='lg:h-full lg:w-[840px] h-[360px] relative'>
+                <picture className='w-full lg:w-[840px] h-full block'>
                     <source
                         srcSet={slides[activeSlide].imageMobile}
                         media="(max-width: 768px)"
@@ -58,27 +58,27 @@ const Hero = () => {
                     />
                 </picture>
 
-                <div className='absolute bottom-0 right-0 w-[112px] h-[56px] bg-black flex justify-center items-center gap-6 lg:right-auto lg:left-[calc(100%-112px)]'>
-                    <button onClick={prevSlide} className='hover:opacity-70 transition-opacity'>
-                        <img className='filter-white h-6'
+                <div className='absolute bottom-0 right-0 lg:left-[calc(100%)] w-[112px] h-[56px] lg:w-[160px] lg:h-[80px] flex justify-center items-center lg:right-auto   group'>
+                    <button onClick={prevSlide} className='flex justify-center ml-0 items-center  bg-black w-[56px] h-[56px] lg:w-[80px] lg:h-[80px] hover:bg-darkGray   hover:cursor-pointer transition-opacity'>
+                        <img className='filter-white h-6 self-center'
                             src={`${baseUrl}/images/icon-arrow-left.svg`} alt="Previous" />
                     </button>
-                    <button onClick={nextSlide} className='hover:opacity-70 transition-opacity'>
+                    <button onClick={nextSlide} className='flex justify-center ml-0 items-center  bg-black w-[56px] h-[56px] lg:w-[80px] lg:h-[80px] hover:bg-darkGray   hover:cursor-pointer transition-opacity'>
                         <img className='filter-white h-6'
                             src={`${baseUrl}/images/icon-arrow-right.svg`} alt="Next" />
                     </button>
                 </div>
             </div>
 
-            <div className='lg:h-full lg:w-[42%] px-[30px] relative lg:p-16 flex flex-col justify-center overflow-y-auto'>
-                <div className='pt-[50px] lg:py-0'>
-                    <h2 className='font-bold text-[39.5px] lg:text-4xl mb-4 tracking-n5 leading-none'>
+            <div className='lg:h-full lg:w-[42%] px-[30px]  relative lg:px-[100px] flex flex-col justify-center overflow-y-auto'>
+                <div className='pt-[50px] lg:pt-[110px]'>
+                    <h2 className='font-bold text-[39.5px] lg:text-[47.5px] mb-4 tracking-n5 leading-none'>
                         {slides[activeSlide].title}
                     </h2>
                     <p className=' mb-6 tracking-n25 font-semibold text-darkGray'>{slides[activeSlide].description}</p>
-                    <div className='flex flex-row gap-4 items-center hover:cursor-pointer'>
-                        <span className='font-bold tracking-l5'>SHOP NOW</span>
-                        <img className='h-[12px]' src={`${baseUrl}/images/icon-arrow.svg`} alt="" />
+                    <div className='flex flex-row gap-4 items-center hover:cursor-pointer group '>
+                        <span className='font-bold tracking-l5 group-hover:text-darkGray '>SHOP NOW</span>
+                        <img className='h-[12px] group-hover:filter-darkGray' src={`${baseUrl}/images/icon-arrow.svg`} alt="" />
                     </div>
                 </div>
             </div>
