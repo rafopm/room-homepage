@@ -57,12 +57,3 @@ p {
   filter: invert(68%) sepia(10%) saturate(22%) hue-rotate(329deg) brightness(91%) contrast(96%);
 }
 
-
-@media (min-width: 768px) {
- 
-}
-
-@media (min-width: 1024px) {
-  
-}
-

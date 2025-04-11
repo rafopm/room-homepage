@@ -5,7 +5,7 @@ const About = () => {
   const baseUrl = useBaseUrl()
 
   return (
-    <div className='flex flex-col lg:flex-row'>
+    <div className='flex flex-col xl:flex-row'>
       <img src={`${baseUrl}/images/image-about-dark.jpg`} alt="" />
       <div className='px-[30px] lg:px-[48px] py-6'>
         <h3 className='font-bold tracking-widest mb-4 mt-4   '>ABOUT OUR FURNITURE</h3>
