@@ -40,9 +40,8 @@ const Hero = () => {
 
     return (
         <div className='flex flex-col lg:flex-row w-full h-screen lg:h-auto'>
-
             {/* Sección de la imagen */}
-            <div className='flex lg:h-full lg:w-[59%] h-[360px] md:h-[400px] relative'>
+            <div className='flex lg:h-full lg:w-[59%]  xl:w-[840px] 2xl:max-w-[59%] h-[360px] md:h-[400px] relative'>
                 <picture className='w-full h-full block'>
                     <source
                         srcSet={slides[activeSlide].imageMobile}
@@ -85,9 +84,9 @@ const Hero = () => {
             </div>
 
             {/* Sección de texto */}
-            <div className='lg:h-full lg:w-[41%] px-[30px] md:px-[50px]  xl:px-[100px] py-[50px] lg:py-0 flex flex-col justify-center overflow-y-auto'>
-                <div className='pt-0 lg:pt-[20px] xl:pt-[110px]'>
-                    <h2 className='font-bold text-[39.5px] md:text-[42px] lg:text-[44px] xl:text-[47.5px] mb-4  tracking-n5 leading-none'>
+            <div className='lg:h-auto lg:w-[41%]  py-[50px] lg:py-0 flex flex-col justify-center items-center overflow-y-auto'>
+                <div className='flex flex-col  justify-center lg:w-[400px] px-[30px] lg:px-[0] xl:pb-[40px]'>
+                    <h2 className='font-bold text-[39.5px] md:text-[42px] lg:text-[44px] xl:text-[47.5px] mb-4 tracking-n5 leading-none'>
                         {slides[activeSlide].title}
                     </h2>
                     <p className='mb-6 tracking-n25 font-semibold text-darkGray'>
