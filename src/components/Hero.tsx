@@ -41,7 +41,7 @@ const Hero = () => {
     return (
         <div className='flex flex-col lg:flex-row w-full h-screen lg:h-auto'>
             {/* Sección de la imagen */}
-            <div className='flex lg:h-full lg:w-[59%]  xl:w-[840px] 2xl:max-w-[59%] h-[360px] md:h-[400px] relative'>
+            <div className='flex lg:h-full lg:w-[59%]  xl:w-[840px] 2xl:w-[59%] h-[360px] md:h-[400px] relative'>
                 <picture className='w-full h-full block'>
                     <source
                         srcSet={slides[activeSlide].imageMobile}
